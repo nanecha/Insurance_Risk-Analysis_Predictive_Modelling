@@ -1,0 +1,12 @@
+
+{
+  "jupyter.askForKernelRestart": false,
+  "jupyter.enablePlotViewer": true,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.autoComplete.extraPaths":
+    [
+      "./src",
+      "./lib"
+    ],
+    "jupyter.interactiveWindow.creationMode": "perFile"
+}
