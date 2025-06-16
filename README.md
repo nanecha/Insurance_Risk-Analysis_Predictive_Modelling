@@ -2,31 +2,37 @@
 # 📊 Insurance Data Analytics - Exploratory Data Analysis (EDA)
 ## 🎯 Goal
 To develop a foundational understanding of the insurance dataset, assess its quality, and uncover patterns in risk and profitability.
-## 📂 Project Structure
----
-├──.github/workflows/main.yml  # GitHub Actions CI/CD
-├──vscode
-  ├──settings.json
-├──.dvc
-├──.venv
-├── data/
-      ├── outputs.csv
-      ├──  rawa.txt                               # Raw or processed datasets
-├── notebooks
-     ├── insurance_analysis_eda.ipynb              # Jupyter Notebooks
-├── src/                                          # Python scripts
-     ├──__init_.py
-     ├─__pycache__
-     ├── data_loader.Py                            #modules
-     ├── data_stats.Py
-     ├──data_visualization.py
-├── tests
-    ├── _init_.py
-    ├──  test_data_stats.py                 # Unit tests
-├── README.md
-├── requirements.txt
-├── .gitignore
 
+![Python](https://img.shields.io/badge/python-3.9+-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/pandas-1.3+-%23150458?style=for-the-badge&logo=pandas&logoColor=white)
+![DVC](https://img.shields.io/badge/DVC-2.0+-%2313ADC7?style=for-the-badge&logo=dataversioncontrol&logoColor=white)
+![CI/CD](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+ 
+## 📂 Project Structure
+
+│Insurance_Risk-Analysis_Predictive_Modelling/
+ ├── .github/workflows/
+ │ └── main.yml │              # GitHub Actions CI/CD
+ ├── .vscode/
+ │ └── settings.json│         # IDE configuration
+ ├── .dvc/                    # Data version control
+ ├── .venv/                   # Virtual environment
+ ├── data/
+ │ ├── outputs.csv            # Processed data
+ │ └── raw.txt                # Raw datasets
+ ├── notebooks/
+ │ └── insurance_analysis_eda.ipynb # Exploratory analysis
+ ├── src/                      # Python modules
+ │ ├── init.py
+ │ ├── data_loader.py          # Data ingestion
+ │ ├── data_stats.py           # Statistical analysis
+ │ └── data_visualization.py   # Plotting utilities
+ ├── tests/
+ │ ├── init.py
+ │ └── test_data_stats.py      # Unit tests
+ ├── README.md                 # This file
+ ├── requirements.txt          # Dependencies
+ └── .gitignore           # Version control exclusions
 ## 🛠️ Setup & Installation
 
 Load necessary Python packages and configure the notebook for data profiling and EDA. using 'requirements.txt'
