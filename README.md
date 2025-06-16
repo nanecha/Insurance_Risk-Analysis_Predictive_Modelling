@@ -1,6 +1,5 @@
 
 # 📊 Insurance Data Analytics - Exploratory Data Analysis (EDA)
-
 ## 🎯 Goal
 To develop a foundational understanding of the insurance dataset, assess its quality, and uncover patterns in risk and profitability.
 ## 📂 Project Structure
