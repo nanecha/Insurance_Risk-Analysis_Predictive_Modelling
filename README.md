@@ -1,33 +1,38 @@
 
 # 📊 Insurance Data Analytics - Exploratory Data Analysis (EDA)
-
 ## 🎯 Goal
 To develop a foundational understanding of the insurance dataset, assess its quality, and uncover patterns in risk and profitability.
-## 📂 Project Structure
----
-├──.github/workflows/main.yml  # GitHub Actions CI/CD
-├──vscode
-  ├──settings.json
-├──.dvc
-├──.venv
-├── data/
-      ├── outputs.csv
-      ├──  rawa.txt                               # Raw or processed datasets
-├── notebooks
-     ├── insurance_analysis_eda.ipynb              # Jupyter Notebooks
-├── src/                                          # Python scripts
-     ├──__init_.py
-     ├─__pycache__
-     ├── data_loader.Py                            #modules
-     ├── data_stats.Py
-     ├──data_visualization.py
-├── tests
-    ├── _init_.py
-    ├──  test_data_stats.py                 # Unit tests
-├── README.md
-├── requirements.txt
-├── .gitignore
 
+![Python](https://img.shields.io/badge/python-3.9+-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/pandas-1.3+-%23150458?style=for-the-badge&logo=pandas&logoColor=white)
+![DVC](https://img.shields.io/badge/DVC-2.0+-%2313ADC7?style=for-the-badge&logo=dataversioncontrol&logoColor=white)
+![CI/CD](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+ 
+## 📂 Project Structure
+
+│Insurance_Risk-Analysis_Predictive_Modelling/
+ ├── .github/workflows/
+ │ └── main.yml │              # GitHub Actions CI/CD
+ ├── .vscode/
+ │ └── settings.json│         # IDE configuration
+ ├── .dvc/                    # Data version control
+ ├── .venv/                   # Virtual environment
+ ├── data/
+ │ ├── outputs.csv            # Processed data
+ │ └── raw.txt                # Raw datasets
+ ├── notebooks/
+ │ └── insurance_analysis_eda.ipynb # Exploratory analysis
+ ├── src/                      # Python modules
+ │ ├── init.py
+ │ ├── data_loader.py          # Data ingestion
+ │ ├── data_stats.py           # Statistical analysis
+ │ └── data_visualization.py   # Plotting utilities
+ ├── tests/
+ │ ├── init.py
+ │ └── test_data_stats.py      # Unit tests
+ ├── README.md                 # This file
+ ├── requirements.txt          # Dependencies
+ └── .gitignore           # Version control exclusions
 ## 🛠️ Setup & Installation
 
 Load necessary Python packages and configure the notebook for data profiling and EDA. using 'requirements.txt'
@@ -109,3 +114,66 @@ Results saved to `F:/Insurance_Risk-Analysis_Predictive_Modelling/data/eda_summa
 ## 📝 Notes
 - Significant missing data in `CustomValueEstimate`, `NumberOfVehiclesInFleet`, and `CrossBorder`.
 - Visualizations saved in `F:/Insurance_Risk-Analysis_Predictive_Modelling/data/outputs/`.
+## Task-3
+## Risk Differences Across Provinces
+
+### Analysis Objective
+This test examines whether there are significant differences in **risk levels** (measured by `Total Claims`) across provinces. The goal is to understand how risk varies regionally, which can inform province-specific policies or risk management strategies.
+
+### Hypotheses
+- **Null Hypothesis (H₀):** No risk differences across provinces.
+- **Alternative Hypothesis (H₁):** Risk differences exist across provinces.
+
+
+### Results
+- **Test Type:** ANOVA (Analysis of Variance)
+  - Compares the mean `Total Claims` across multiple provinces.
+- **F-Statistic:** 8.626
+  - Indicates that the variance in `Total Claims` between provinces is significantly greater than the variance within provinces.
+- **p-Value:** 0.000193
+  - This value is much smaller than the common significance level of 0.05, suggesting the observed differences are highly unlikely to be due to random chance.
+- **Decision:** Reject the null hypothesis (H₀).
+
+### Conclusion
+There is strong evidence to conclude that **significant risk differences exist across provinces**.
+
+### Implications
+1. **Risk Management:** Provinces with higher average claims may require stricter risk mitigation measures, while lower-risk provinces could benefit from premium reductions.
+2. **Pricing Strategy:** Develop province-specific premium structures to reflect the risk profile of each province.
+3. **Further Analysis:** Investigate the factors contributing to risk differences, such as demographic, geographic, or economic factors.
+
+## Risk Differences Between Zip Codes
+
+### Analysis Objective
+This test examines whether there are significant differences in **risk levels** (measured by `Total Claims`) between zip codes. The goal is to evaluate how risk varies geographically at a finer level, providing insights for localized strategies.
+
+### Hypotheses
+- **Null Hypothesis (H₀):** No risk differences between zip codes.
+- **Alternative Hypothesis (H₁):** Risk differences exist between zip codes.
+## Interpretation: Risk Differences Between Genders
+
+### Analysis Objective
+This test examines whether there are significant differences in **risk levels** (measured by `Total Claims`) between genders. Understanding risk differences by gender can help insurers design gender-specific policies or adjust premiums based on claims data.
+
+### Hypotheses
+- **Null Hypothesis (H₀):** No significant risk differences between women and men.
+- **Alternative Hypothesis (H₁):** Significant risk differences exist between women and men.
+ ### Results
+- **Test Type:** T-Test (Independent Samples)
+  - Compares the mean `Total Claims` between two independent groups: women and men.
+- **T-Statistic:** 3.569
+  - Indicates the magnitude of the difference between the means relative to the variability within groups.
+- **p-Value:** 0.000375
+  - This value is much smaller than the common significance level of 0.05, suggesting that the observed differences are highly unlikely to be due to random chance.
+- **Decision:** Reject the null hypothesis (H₀).
+
+### Conclusion
+There is strong evidence to conclude that **significant risk differences exist between women and men**.
+
+### Implications
+1. **Gender-Specific Strategies:**
+   - If men or women exhibit consistently higher claims, tailor policies, premiums, or risk mitigation strategies accordingly.
+2. **Premium Adjustments:**
+   - For the gender with lower average claims, consider offering reduced premiums to attract more clients.
+3. **Further Analysis:**
+   - Investigate underlying factors contributing to the differences, such as claim frequency, type of coverage, or demographic influences.
