@@ -114,3 +114,66 @@ Results saved to `F:/Insurance_Risk-Analysis_Predictive_Modelling/data/eda_summa
 ## 📝 Notes
 - Significant missing data in `CustomValueEstimate`, `NumberOfVehiclesInFleet`, and `CrossBorder`.
 - Visualizations saved in `F:/Insurance_Risk-Analysis_Predictive_Modelling/data/outputs/`.
+## Task-3
+## Risk Differences Across Provinces
+
+### Analysis Objective
+This test examines whether there are significant differences in **risk levels** (measured by `Total Claims`) across provinces. The goal is to understand how risk varies regionally, which can inform province-specific policies or risk management strategies.
+
+### Hypotheses
+- **Null Hypothesis (H₀):** No risk differences across provinces.
+- **Alternative Hypothesis (H₁):** Risk differences exist across provinces.
+
+
+### Results
+- **Test Type:** ANOVA (Analysis of Variance)
+  - Compares the mean `Total Claims` across multiple provinces.
+- **F-Statistic:** 8.626
+  - Indicates that the variance in `Total Claims` between provinces is significantly greater than the variance within provinces.
+- **p-Value:** 0.000193
+  - This value is much smaller than the common significance level of 0.05, suggesting the observed differences are highly unlikely to be due to random chance.
+- **Decision:** Reject the null hypothesis (H₀).
+
+### Conclusion
+There is strong evidence to conclude that **significant risk differences exist across provinces**.
+
+### Implications
+1. **Risk Management:** Provinces with higher average claims may require stricter risk mitigation measures, while lower-risk provinces could benefit from premium reductions.
+2. **Pricing Strategy:** Develop province-specific premium structures to reflect the risk profile of each province.
+3. **Further Analysis:** Investigate the factors contributing to risk differences, such as demographic, geographic, or economic factors.
+
+## Risk Differences Between Zip Codes
+
+### Analysis Objective
+This test examines whether there are significant differences in **risk levels** (measured by `Total Claims`) between zip codes. The goal is to evaluate how risk varies geographically at a finer level, providing insights for localized strategies.
+
+### Hypotheses
+- **Null Hypothesis (H₀):** No risk differences between zip codes.
+- **Alternative Hypothesis (H₁):** Risk differences exist between zip codes.
+## Interpretation: Risk Differences Between Genders
+
+### Analysis Objective
+This test examines whether there are significant differences in **risk levels** (measured by `Total Claims`) between genders. Understanding risk differences by gender can help insurers design gender-specific policies or adjust premiums based on claims data.
+
+### Hypotheses
+- **Null Hypothesis (H₀):** No significant risk differences between women and men.
+- **Alternative Hypothesis (H₁):** Significant risk differences exist between women and men.
+ ### Results
+- **Test Type:** T-Test (Independent Samples)
+  - Compares the mean `Total Claims` between two independent groups: women and men.
+- **T-Statistic:** 3.569
+  - Indicates the magnitude of the difference between the means relative to the variability within groups.
+- **p-Value:** 0.000375
+  - This value is much smaller than the common significance level of 0.05, suggesting that the observed differences are highly unlikely to be due to random chance.
+- **Decision:** Reject the null hypothesis (H₀).
+
+### Conclusion
+There is strong evidence to conclude that **significant risk differences exist between women and men**.
+
+### Implications
+1. **Gender-Specific Strategies:**
+   - If men or women exhibit consistently higher claims, tailor policies, premiums, or risk mitigation strategies accordingly.
+2. **Premium Adjustments:**
+   - For the gender with lower average claims, consider offering reduced premiums to attract more clients.
+3. **Further Analysis:**
+   - Investigate underlying factors contributing to the differences, such as claim frequency, type of coverage, or demographic influences.
