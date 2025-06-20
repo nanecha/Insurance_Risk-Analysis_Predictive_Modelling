@@ -178,7 +178,7 @@ There is strong evidence to conclude that **significant risk differences exist b
 3. **Further Analysis:**
    - Investigate underlying factors contributing to the differences, such as claim frequency, type of coverage, or demographic influences.
 
-    Task 4: Predictive Modeling Report
+    # Task 4: Predictive Modeling Report
 
 ## Claim Severity Results
 | Model             |    RMSE |       R� |
